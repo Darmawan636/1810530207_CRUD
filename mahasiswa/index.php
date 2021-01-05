@@ -7,6 +7,8 @@
 <body>
 	<div class="container">
 		<div class="alert alert-info">Data Mahasiswa</div>
+		<a href="create.php" class="btn btn-info">Tambah Data</a>
+		<br><br>
 		<table class="table table-bordered">
 			<thead>					
 				<tr>
@@ -27,12 +29,12 @@
 					?>
 					<tr>
 						<td><?= $no++;?></td>
-						<td><?= $isi-> nim;?></td>
-						<td><?= $isi-> nama_mahasiswa;?></td>
-						<td><?= $isi-> prodi;?></td>
+						<td><?php echo $isi->nim; ?></td>
+						<td><?= $isi->nama_mahasiswa;?></td>
+						<td><?= $isi->prodi;?></td>
 						<td>
-							<a href="" class="btn btn danger">Del</a>
-							<a href="" class="btn btn Warning">Edit</a>
+							<a href="delete.php?nim=<?php echo $isi->nim; ?>" class="btn btn-danger">Del</a>
+							<a href="update.php?nim=<?php echo $isi->nim; ?>" class="btn btn-warning">Edit</a>
 						</td>
 					</tr>
 				<?php } ?>
